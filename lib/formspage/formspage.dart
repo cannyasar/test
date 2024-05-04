@@ -14,7 +14,6 @@ class _FormsPageState extends State<FormsPage> {
   TextEditingController _searchController = TextEditingController();
   String _searchText = '';
 
-  // List<String> itemNames = ['Taahüt', 'Servis' ,'Bakım' , 'Sevkiyat - Teslim' , 'Pazarlama']; // List Title
   List<Map<String, dynamic>> items = [
     {'name': 'Taahüt' , 'subName' : 'Montaj' , 'icon': Icons.build_outlined , 'value': 0},
     {'name': 'Servis' , 'subName' : 'Pekcan Havuz' , 'icon': Icons.construction_outlined , 'value': 1},
@@ -50,7 +49,7 @@ class _FormsPageState extends State<FormsPage> {
             child: ListView.builder(
               itemCount: items.length,
               itemBuilder: (BuildContext context, int index) {
-                // Arama metni boşsa veya öğe isim veya alt isiminde arama metni içeriyorsa göster
+                // Show if search text is empty or contains search text in item name or subname
                 if (_searchText.isEmpty ||
                     items[index]['name'].toLowerCase().contains(_searchText.toLowerCase()) ||
                     items[index]['subName'].toString().toLowerCase().contains(_searchText.toLowerCase())) {
@@ -64,7 +63,7 @@ class _FormsPageState extends State<FormsPage> {
                     },
                   );
                 } else {
-                  // Arama metni bulunmuyorsa boş bir Container döndür
+                  // Return an empty Container if no search text is found
                   return Container();
                 }
               },
@@ -112,7 +111,6 @@ class _FormsPageState extends State<FormsPage> {
 
   @override
   void dispose() {
-    // Sayfa kapatıldığında controller'ı temizle
     _searchController.dispose();
     super.dispose();
   }

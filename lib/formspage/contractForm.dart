@@ -1,6 +1,4 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 class ContractForm extends StatefulWidget {
   @override
@@ -113,9 +111,7 @@ class _ContractFormState extends State<ContractForm> {
               SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  // Kaydet butonuna basıldığında yapılacak işlemler
-                  // Burada verileri bir şekilde kaydetmeli veya göndermeli
-                  // Örneğin bir API'ye gönderme gibi
+                  // Actions to be taken when pressing the Save button
                 },
                 child: Text('Kaydet'),
               ),

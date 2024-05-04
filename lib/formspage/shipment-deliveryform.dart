@@ -140,9 +140,7 @@ class _ShipmentAndDeliveryFormState extends State<ShipmentAndDeliveryForm> {
               SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  // Kaydet butonuna basıldığında yapılacak işlemler
-                  // Burada verileri bir şekilde kaydetmeli veya göndermeli
-                  // Örneğin bir API'ye gönderme gibi
+                  // Actions to be taken when pressing the Save button
                 },
                 child: Text('Kaydet'),
               ),
