@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'formspage/formspage.dart'; // FormlarPage'yi ekledik
+import 'formspage/formspage.dart'; // Added the FormsPage
 
 void main() {
   runApp(MyApp());
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
     Center(
       child: Text('Gelen', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
     ),
-    FormsPage(), // Burada direkt FormlarPage widget'ını kullanıyoruz
+    FormsPage(), // Using the FormsPage widget directly here
     Center(
       child: Text('Taslaklar', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
     ),
@@ -41,10 +41,10 @@ class _HomePageState extends State<HomePage> {
   ];
 
   static List<String> _appBarTitles = [
-    'Gelen', // 0. indeks için başlık
-    'Formlar', // 1. indeks için başlık
-    'Taslaklar', // 2. indeks için başlık
-    'Bekleyenler', // 3. indeks için başlık
+    'Gelen', // Title for index 0
+    'Formlar', // Title for index 1
+    'Taslaklar', // Title for index 2
+    'Bekleyenler', // Title for index 3
   ];
 
   void _onItemTapped(int index) {
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_appBarTitles[_selectedIndex]), // Seçilen sayfanın başlığını al
+        title: Text(_appBarTitles[_selectedIndex]), // Get the title of the selected page
       ),
       drawer: Drawer(
         child: ListView(
@@ -78,15 +78,15 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: Text('Ayarlar'),
               onTap: () {
-                Navigator.pop(context); // Drawer'ı kapat
-                // Ayarlar sayfasına git
+                Navigator.pop(context); // Close the drawer
+                // Navigate to the Settings page
               },
             ),
             ListTile(
               title: Text('Yardım'),
               onTap: () {
-                Navigator.pop(context); // Drawer'ı kapat
-                // Yardım sayfasına git
+                Navigator.pop(context); // Close the drawer
+                // Navigate to the Help page
               },
             ),
           ],
