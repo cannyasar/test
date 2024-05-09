@@ -56,8 +56,8 @@ class _FormsPageState extends State<FormsPage> {
                   return ListTile(
                     leading: Icon(items[index]['icon']),
                     title: Text(items[index]['name']),
-                    subtitle: Text(items[index]['subName']), // Alt isimlerin virgülle birleştirilmiş hali
-                    trailing: Icon(Icons.arrow_forward_ios), // Ok işareti
+                    subtitle: Text(items[index]['subName']), // Joined form of subnames with commas
+                    trailing: Icon(Icons.arrow_forward_ios), // Arrow icon
                     onTap: () {
                       _handleTap(items[index]['value']);
                     },

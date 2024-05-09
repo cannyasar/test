@@ -21,7 +21,6 @@ class _MaintenanceFormState extends State<MaintenanceForm> {
   List<Map<String, dynamic>> items = [
     {'name': 'Evet', 'value': 0},
     {'name': 'Hayır', 'value': 1},
-    // {'name': 'Seçenek 3', 'value': 2}
   ];
 
   Future<void> _getImage() async {
